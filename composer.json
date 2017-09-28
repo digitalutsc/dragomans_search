@@ -1,0 +1,14 @@
+{
+  "name": "drupal/dragomans_search",
+  "type": "drupal-module",
+  "description": "Dragomans Search",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/dragomans_search",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/dragomans_search",
+    "source": "http://cgit.drupalcode.org/dragomans_search"
+  },
+  "require": { }
+}

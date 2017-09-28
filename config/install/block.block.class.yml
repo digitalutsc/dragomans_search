@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.filter_dragomans_classes
+  module:
+    - facets
+    - system
+  theme:
+    - carapace
+id: class
+theme: carapace
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:filter_dragomans_classes'
+settings:
+  id: 'facet_block:filter_dragomans_classes'
+  label: Class
+  provider: facets
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /search
+    negate: false
+    context_mapping: {  }

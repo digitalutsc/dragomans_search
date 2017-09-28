@@ -1,0 +1,12 @@
+name: dragomans_search
+type: module
+description: Dragomans Search
+core: 8.x
+package: Custom
+core: 8.x
+dependencies:
+  - block
+  - facets
+  - search_api
+  - system
+  - views
