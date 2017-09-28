@@ -5,6 +5,9 @@ dependencies:
   config:
     - search_api.index.default_solr_index
     - views.view.solr_search_content_type
+  enforced:
+    module:
+      - dragomans
   module:
     - search_api
 _core:

@@ -3,6 +3,9 @@ status: true
 dependencies:
   config:
     - facets.facet.filter_dragomans_classes
+  enforced:
+    module:
+      - dragomans
   module:
     - facets
     - system

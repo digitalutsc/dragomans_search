@@ -6,6 +6,9 @@ dependencies:
     - field.storage.node.field_genre
     - search_api.server.default_solr_server
     - core.entity_view_mode.node.search_index
+  enforced:
+    module:
+      - dragomans
   module:
     - taxonomy
     - user

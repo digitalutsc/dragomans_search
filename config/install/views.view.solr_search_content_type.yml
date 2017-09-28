@@ -3,6 +3,9 @@ status: true
 dependencies:
   config:
     - search_api.index.default_solr_index
+  enforced:
+    module:
+      - dragomans
   module:
     - search_api
 id: solr_search_content_type

@@ -3,6 +3,9 @@ status: true
 dependencies:
   config:
     - facets.facet.filter_by_genre
+  enforced:
+    module:
+      - dragomans
   module:
     - facets
     - system
