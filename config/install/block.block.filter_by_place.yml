@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.filter_by_place
+  module:
+    - facets
+    - system
+  theme:
+    - carapace
+id: filter_by_place
+theme: carapace
+region: sidebar_first
+weight: -5
+provider: null
+plugin: 'facet_block:filter_by_place'
+settings:
+  id: 'facet_block:filter_by_place'
+  label: Place
+  provider: facets
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /search
+    negate: false
+    context_mapping: {  }
