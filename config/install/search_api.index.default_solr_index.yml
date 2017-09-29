@@ -4,11 +4,16 @@ dependencies:
   config:
     - field.storage.node.field_tags
     - field.storage.node.field_genre
+    - field.storage.node.field_place
+    - field.storage.node.field_profession
+    - field.storage.node.field_topic
+    - field.storage.node.field_agency
+    - field.storage.node.field_language
+    - field.storage.node.field_event_type
+    - field.storage.node.field_position
+    - field.storage.node.field_nation
     - search_api.server.default_solr_server
     - core.entity_view_mode.node.search_index
-  enforced:
-    module:
-      - dragomans
   module:
     - taxonomy
     - user
@@ -103,6 +108,70 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_genre
+  field_place:
+    label: 'Place of agency'
+    datasource_id: 'entity:node'
+    property_path: field_place
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_place
+  field_profession:
+    label: Profession
+    datasource_id: 'entity:node'
+    property_path: field_profession
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_profession
+  field_topic:
+    label: Topics
+    datasource_id: 'entity:node'
+    property_path: field_topic
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_topic
+  field_agency:
+    label: Agency
+    datasource_id: 'entity:node'
+    property_path: field_agency
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_agency
+  field_language:
+    label: Language
+    datasource_id: 'entity:node'
+    property_path: field_language
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_language
+  field_event_type:
+    label: 'Event Type'
+    datasource_id: 'entity:node'
+    property_path: field_event_type
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_event_type
+  field_position:
+    label: Position
+    datasource_id: 'entity:node'
+    property_path: field_position
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_position
+  field_nation:
+    label: Nation
+    datasource_id: 'entity:node'
+    property_path: field_nation
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_nation
 datasource_settings:
   'entity:node':
     bundles:

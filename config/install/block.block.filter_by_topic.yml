@@ -2,24 +2,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.filter_dragomans_classes
-  enforced:
-    module:
-      - dragomans
+    - facets.facet.filter_by_topic
   module:
     - facets
     - system
   theme:
     - carapace
-id: class
+id: filter_by_topic
 theme: carapace
 region: sidebar_first
-weight: 0
+weight: -9
 provider: null
-plugin: 'facet_block:filter_dragomans_classes'
+plugin: 'facet_block:filter_by_topic'
 settings:
-  id: 'facet_block:filter_dragomans_classes'
-  label: Class
+  id: 'facet_block:filter_by_topic'
+  label: Topic
   provider: facets
   label_display: visible
 visibility:

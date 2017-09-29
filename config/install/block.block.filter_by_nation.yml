@@ -2,24 +2,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.filter_by_genre
-  enforced:
-    module:
-      - dragomans
+    - facets.facet.filter_by_nation
   module:
     - facets
     - system
   theme:
     - carapace
-id: filter_by_genre
+id: filter_by_nation
 theme: carapace
 region: sidebar_first
-weight: 0
+weight: -6
 provider: null
-plugin: 'facet_block:filter_by_genre'
+plugin: 'facet_block:filter_by_nation'
 settings:
-  id: 'facet_block:filter_by_genre'
-  label: Genre
+  id: 'facet_block:filter_by_nation'
+  label: Nation
   provider: facets
   label_display: visible
 visibility:

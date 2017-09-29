@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.filter_by_position
+  module:
+    - facets
+    - system
+  theme:
+    - carapace
+id: filter_by_position
+theme: carapace
+region: sidebar_first
+weight: -4
+provider: null
+plugin: 'facet_block:filter_by_position'
+settings:
+  id: 'facet_block:filter_by_position'
+  label: Position
+  provider: facets
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /pages
+    negate: false
+    context_mapping: {  }

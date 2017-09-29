@@ -4,14 +4,11 @@ dependencies:
   config:
     - search_api.index.default_solr_index
     - views.view.solr_search
-  enforced:
-    module:
-      - dragomans
   module:
     - search_api
-id: filter_content_type
-name: 'Content type'
-url_alias: filter_content_type
+id: filter_by_contentype
+name: 'Content Type'
+url_alias: filter_by_contentype
 weight: 0
 min_count: 1
 show_only_one_result: false
@@ -48,6 +45,16 @@ processor_configs:
       sort: -10
     settings:
       sort: ASC
+  list_item:
+    processor_id: list_item
+    weights:
+      build: 5
+    settings: {  }
+  translate_entity:
+    processor_id: translate_entity
+    weights:
+      build: 5
+    settings: {  }
   url_processor_handler:
     processor_id: url_processor_handler
     weights:

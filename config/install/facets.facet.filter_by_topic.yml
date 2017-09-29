@@ -6,13 +6,13 @@ dependencies:
     - views.view.solr_search
   module:
     - search_api
-id: filter_by_genre
-name: Genre
-url_alias: filter_genre
+id: filter_by_topic
+name: Topic
+url_alias: filter_by_topic
 weight: 0
 min_count: 1
 show_only_one_result: false
-field_identifier: field_genre
+field_identifier: field_topic
 facet_source_id: 'search_api:views_page__solr_search__page_1'
 widget:
   type: links

@@ -2,24 +2,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.filter_content_type
-  enforced:
-    module:
-      - dragomans
+    - facets.facet.filter_by_place
   module:
     - facets
     - system
   theme:
     - carapace
-id: filter_content_type
+id: place
 theme: carapace
 region: sidebar_first
-weight: 0
+weight: -5
 provider: null
-plugin: 'facet_block:filter_content_type'
+plugin: 'facet_block:filter_by_place'
 settings:
-  id: 'facet_block:filter_content_type'
-  label: 'Content type'
+  id: 'facet_block:filter_by_place'
+  label: Place
   provider: facets
   label_display: visible
 visibility:

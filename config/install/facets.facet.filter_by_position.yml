@@ -1,25 +1,19 @@
-uuid: e24b6098-d4ca-4056-896a-dffd1069f14e
 langcode: en
 status: true
 dependencies:
   config:
     - search_api.index.default_solr_index
-    - views.view.solr_search_content_type
-  enforced:
-    module:
-      - dragomans
+    - views.view.solr_search
   module:
     - search_api
-_core:
-  default_config_hash: 1w2LSU9jPjUG8KbqwmFzxMcqNwnf6zArOIcqVFGFwjo
-id: filter_dragomans_classes
-name: Class
-url_alias: filter_dragomans_classes
+id: filter_by_position
+name: Position
+url_alias: filter_by_position
 weight: 0
 min_count: 1
 show_only_one_result: false
-field_identifier: type
-facet_source_id: 'search_api:views_page__solr_search_content_type__page_1'
+field_identifier: field_position
+facet_source_id: 'search_api:views_page__solr_search__page_1'
 widget:
   type: links
   config:
@@ -31,7 +25,7 @@ expand_hierarchy: false
 enable_parent_when_child_gets_disabled: true
 hard_limit: 0
 exclude: false
-only_visible_when_facet_source_is_visible: false
+only_visible_when_facet_source_is_visible: true
 processor_configs:
   active_widget_order:
     processor_id: active_widget_order
@@ -51,6 +45,16 @@ processor_configs:
       sort: -10
     settings:
       sort: ASC
+  list_item:
+    processor_id: list_item
+    weights:
+      build: 5
+    settings: {  }
+  translate_entity:
+    processor_id: translate_entity
+    weights:
+      build: 5
+    settings: {  }
   url_processor_handler:
     processor_id: url_processor_handler
     weights:
@@ -59,4 +63,3 @@ processor_configs:
     settings: {  }
 empty_behavior:
   behavior: none
-
