@@ -2,7 +2,7 @@ name: dragomans_search
 type: module
 description: Dragomans Search
 core: 8.x
-package: Custom
+package: Dragomans
 core: 8.x
 dependencies:
   - block
