@@ -124,7 +124,7 @@ display:
             archival_object: archival_object
             document: document
             documentgenrerelation: documentgenrerelation
-            event_type: event_type
+            event: event
             person: person
             personpositionrelation: personpositionrelation
           group: 1
