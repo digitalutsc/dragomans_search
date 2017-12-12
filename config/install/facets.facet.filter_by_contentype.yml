@@ -1,4 +1,3 @@
-uuid: 14a0f9c7-9a26-41f1-baa8-b849ea61563b
 langcode: en
 status: true
 dependencies:
@@ -34,30 +33,18 @@ hard_limit: 0
 exclude: false
 only_visible_when_facet_source_is_visible: true
 processor_configs:
-  active_widget_order:
-    processor_id: active_widget_order
-    weights:
-      sort: -10
-    settings:
-      sort: DESC
   count_widget_order:
     processor_id: count_widget_order
     weights:
       sort: -10
     settings:
       sort: DESC
-  display_value_widget_order:
-    processor_id: display_value_widget_order
-    weights:
-      sort: -10
-    settings:
-      sort: ASC
   exclude_specified_items:
     processor_id: exclude_specified_items
     weights:
       build: -10
     settings:
-      exclude: 'documentgenrerelation, event_type, personpositionrelation'
+      exclude: 'documentgenrerelation, event, personpositionrelation'
       regex: false
   list_item:
     processor_id: list_item
@@ -77,4 +64,3 @@ processor_configs:
     settings: {  }
 empty_behavior:
   behavior: none
-
