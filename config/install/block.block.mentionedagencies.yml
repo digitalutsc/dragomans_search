@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.filter_by_contentype
+    - facets.facet.filter_by_mentioned_agencies
   enforced:
     module:
       - dragomans_search
@@ -11,15 +11,15 @@ dependencies:
     - system
   theme:
     - carapace
-id: filter_by_contenttype
+id: mentionedagencies
 theme: carapace
 region: sidebar_first
-weight: -10
+weight: 0
 provider: null
-plugin: 'facet_block:filter_by_contentype'
+plugin: 'facet_block:filter_by_mentioned_agencies'
 settings:
-  id: 'facet_block:filter_by_contentype'
-  label: 'Content Type'
+  id: 'facet_block:filter_by_mentioned_agencies'
+  label: 'Mentioned Agencies'
   provider: facets
   label_display: visible
 visibility:

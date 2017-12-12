@@ -2,21 +2,24 @@ langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.filter_by_place
+    - facets.facet.filter_by_mentioned_places
+  enforced:
+    module:
+      - dragomans_search
   module:
     - facets
     - system
   theme:
     - carapace
-id: filter_by_place
+id: mentionedplaces
 theme: carapace
 region: sidebar_first
-weight: -5
+weight: 0
 provider: null
-plugin: 'facet_block:filter_by_place'
+plugin: 'facet_block:filter_by_mentioned_places'
 settings:
-  id: 'facet_block:filter_by_place'
-  label: Place
+  id: 'facet_block:filter_by_mentioned_places'
+  label: 'Mentioned Places'
   provider: facets
   label_display: visible
 visibility:

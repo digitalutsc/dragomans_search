@@ -3,6 +3,9 @@ status: true
 dependencies:
   config:
     - facets.facet.filter_by_nation
+  enforced:
+    module:
+      - dragomans_search
   module:
     - facets
     - system

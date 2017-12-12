@@ -4,6 +4,9 @@ dependencies:
   config:
     - search_api.index.default_solr_index
     - system.menu.main
+  enforced:
+    module:
+      - dragomans_search
   module:
     - search_api
 id: solr_search
@@ -120,8 +123,10 @@ display:
           value:
             archival_object: archival_object
             document: document
-            event: event
+            documentgenrerelation: documentgenrerelation
+            event_type: event_type
             person: person
+            personpositionrelation: personpositionrelation
           group: 1
           exposed: false
           expose:

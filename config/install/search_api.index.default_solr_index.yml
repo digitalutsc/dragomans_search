@@ -12,8 +12,13 @@ dependencies:
     - field.storage.node.field_event_type
     - field.storage.node.field_position
     - field.storage.node.field_nation
+    - field.storage.node.field_subject_agencies
+    - field.storage.node.field_subject_places
     - search_api.server.default_solr_server
     - core.entity_view_mode.node.search_index
+  enforced:
+    module:
+      - dragomans_search
   module:
     - taxonomy
     - user
@@ -172,6 +177,22 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_nation
+  field_subject_agencies:
+    label: 'Mentioned Agencies'
+    datasource_id: 'entity:node'
+    property_path: field_subject_agencies
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_subject_agencies
+  field_subject_places:
+    label: 'Mentioned Placenames'
+    datasource_id: 'entity:node'
+    property_path: field_subject_places
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_subject_places
 datasource_settings:
   'entity:node':
     bundles:
@@ -196,12 +217,6 @@ processor_settings:
       string: 2
       b: 2
     all_fields: false
-  aggregated_field:
-    weights:
-      add_properties: 20
-  add_url:
-    weights:
-      preprocess_index: -30
   rendered_item:
     weights:
       add_properties: 0
@@ -210,6 +225,12 @@ processor_settings:
     weights:
       preprocess_index: -6
       preprocess_query: -4
+  aggregated_field:
+    weights:
+      add_properties: 20
+  add_url:
+    weights:
+      preprocess_index: -30
 tracker_settings:
   default: {  }
 options:

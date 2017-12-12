@@ -4,6 +4,9 @@ dependencies:
   config:
     - search_api.index.default_solr_index
     - views.view.solr_search
+  enforced:
+    module:
+      - dragomans_search
   module:
     - search_api
 id: filter_by_language
